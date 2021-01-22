@@ -4,6 +4,7 @@
 <% @users.each do |user| %>
 <h1 class="has-text-centered mt-6"><%= user.username %></h1>
 <h1 class="has-text-centered"><%= user.email %></h1>
+<%= link_to  "edit", edit_user_path(user), class: "button"%>
 <%end %>
 <%= link_to  "Create a new User", new_user_path, class: "button is-primary mt-3 "%>
 

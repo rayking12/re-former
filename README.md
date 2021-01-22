@@ -1,27 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 
-# Micro-reddit
-This project consists of creating a light weight version of reddit called micro-reddit with emphasis in the model part of Ruby on Rails, data modeling and testing our active record knowledge or ORM('object relational mapping')
+# re-form
+This project is about building forms in Rails using first nearly-pure HTML forms to more advanced ways using helpers to achieve the desired goal.
 
-**User table**
 
-![user table in Rails console](app/assets/images/User_table.png)
+## This project has the following features:
 
-**Post table**
-
-![post table in Rails console](app/assets/images/Post_table.png)
-
-**Comment table**
-
-![comment table in Rails console](app/assets/images/User_table.png)
-
-## Sample of The Next Web Page Website Clone with the following features:
-
-- Navigation Bar
-- Main section
-- Articles
-- Footer
+- Create user
+- Update User
 
 ## Built With
 
@@ -37,7 +24,7 @@ If you intend to download the project, you will need to have Ruby already instal
 
 Follow along the steps below to get a copy on your local machine.
 
-- Navigate to the directory where you want this project to live and then clone it `git clone git@github.com:helciodev/micro-reddit-repo.git`
+- Navigate to the directory where you want this project to live and then clone it `git clone git@github.com:rayking12/re-former.git`
 - Navigate to the `micro-reddit-repo` directory
 - install the gem package with `bundle install`
 - Migrate the database on your local machine with `rails db:migrate`
@@ -45,7 +32,7 @@ Follow along the steps below to get a copy on your local machine.
 
 **To get your own copy of our project clone the repository to your local machine.**
 
-[repository](https://github.com/helciodev/micro-reddit-repo)
+[repository](https://github.com/rayking12/re-former)
 
 ## Authors
 
@@ -65,7 +52,7 @@ Follow along the steps below to get a copy on your local machine.
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/helciodev/micro-reddit-repo/issues).
+Feel free to check the [issues page](https://github.com/rayking12/re-former/issues).
 
 ## Show your support
 

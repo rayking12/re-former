@@ -9,7 +9,9 @@
 	<input type="submit" value="Submit">
 </form>-->
 
-<%= form_tag('/users') do %>
+<%
+=begin%>
+ <%= form_tag('/users') do %>
 <%= label_tag 'name', 'Your name' %>
 <%= text_field_tag 'username' %>
 <%= label_tag 'email', 'email' %>
@@ -17,4 +19,32 @@
 <%= label_tag 'password', 'password' %>
 <%= password_field_tag 'password' %>
 <div><%= submit_tag 'submit' %></div>
-<%end%>
+<%end%> 
+<%
+=end%>
+
+
+<%= form_for @user do |form| %>
+	<% @user.errors.any? %>
+	<% @user.errors.full_messages.each do |msg| %>
+		< class = "alert">
+			<p>
+				<%= msg %>
+			</p>
+		</div>
+	<% end %>		
+  <div class="field">
+		<div class = 'inner-div'>
+			<h2>Create account</h2>
+		
+				<%= form.text_field :username, placeholder: "Username", :class => 'text' %>
+
+				<%= form.email_field :email, placeholder: "Email", :class => 'text' %>
+
+				<%= form.password_field :password, placeholder: "Password", :class => 'text' %>
+
+				<%= form.submit 'submit', :class => 'submit' %>
+			</div>
+		</div>
+<% end %>
+<%= link_to  "Home", root_path, class: "button is-dark "%>

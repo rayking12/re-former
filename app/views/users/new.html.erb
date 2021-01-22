@@ -1,28 +1,20 @@
-<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-<h1 class="tile">new User</h1>
+<!--<form accept-charset="UTF-8" action="new_user_path" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<label for="username">Username</label>
+	<input type="text" id="username" name="user[username]"><br>
+	<label for="email">Email</label>
+	<input type="text" id="email" name="user[email]"><br>
+	<label for="password">Password</label>
+	<input type="password" id="password" name="user[password]"><br>
+	<input type="submit" value="Submit">
+</form>-->
 
-
-<form action="" method="post" accept-charset="UTF-8" class="form">
-<div class="columns is-centered">
-<div class="column">
-  <label for="name">name:</label>
-  <input type="text" name="name">
-</div>
-<div class="column"> 
- <label for="email">email:</label>
-  <input type="e-mail" name="email">
-  </div>
-<div class="column">
-<label for="password">Password</label>
-  <input type="password" name="password">
-  </div>
-<div class="column">  <label for="password-conf">confirm password:</label>
-  <input type="password" name="password-conf"></div>
-  <div>
-  <input type="submit" value="submit">
-  </div>
-  
-</div>
-</form>
-
-
+<%= form_tag('/users') do %>
+<%= label_tag 'name', 'Your name' %>
+<%= text_field_tag 'username' %>
+<%= label_tag 'email', 'email' %>
+<%= email_field_tag 'email' %>
+<%= label_tag 'password', 'password' %>
+<%= password_field_tag 'password' %>
+<div><%= submit_tag 'submit' %></div>
+<%end%>

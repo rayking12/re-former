@@ -24,10 +24,9 @@
 =end%>
 
 
-<%= form_for @user do |form| %>
+<%= form_for @user do |f| %>
 	<% @user.errors.any? %>
 	<% @user.errors.full_messages.each do |msg| %>
-		< class = "alert">
 			<p>
 				<%= msg %>
 			</p>
@@ -37,13 +36,13 @@
 		<div class = 'inner-div'>
 			<h2>Create account</h2>
 		
-				<%= form.text_field :username, placeholder: "Username", :class => 'text' %>
+				<%= f.text_field :username, placeholder: "Username", :class => 'text' %>
 
-				<%= form.email_field :email, placeholder: "Email", :class => 'text' %>
+				<%= f.email_field :email, placeholder: "Email", :class => 'text' %>
 
-				<%= form.password_field :password, placeholder: "Password", :class => 'text' %>
+				<%= f.password_field :password, placeholder: "Password", :class => 'text' %>
 
-				<%= form.submit 'submit', :class => 'submit' %>
+				<%= f.submit 'submit', :class => 'submit' %>
 			</div>
 		</div>
 <% end %>

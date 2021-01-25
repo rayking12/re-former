@@ -25,7 +25,7 @@ If you intend to download the project, you will need to have Ruby already instal
 Follow along the steps below to get a copy on your local machine.
 
 - Navigate to the directory where you want this project to live and then clone it `git clone git@github.com:rayking12/re-former.git`
-- Navigate to the `micro-reddit-repo` directory
+- Navigate to the `re-former` directory
 - install the gem package with `bundle install`
 - Migrate the database on your local machine with `rails db:migrate`
 - Open the console ($ rails console)

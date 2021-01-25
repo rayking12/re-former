@@ -1,6 +1,13 @@
 
 
-<%= form_for @user do |f| %>		
+<%= form_for @user do |f| %>
+<% @user.errors.any? %>
+	<% @user.errors.full_messages.each do |msg| %>
+			<p>
+				<%= msg %>
+			</p>
+		</div>
+	<% end %>
   <div class="field">
 		<div>
 			<h2>Edit account</h2>

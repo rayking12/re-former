@@ -1,0 +1,49 @@
+<!--<form accept-charset="UTF-8" action="new_user_path" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<label for="username">Username</label>
+	<input type="text" id="username" name="user[username]"><br>
+	<label for="email">Email</label>
+	<input type="text" id="email" name="user[email]"><br>
+	<label for="password">Password</label>
+	<input type="password" id="password" name="user[password]"><br>
+	<input type="submit" value="Submit">
+</form>-->
+
+<%
+=begin%>
+ <%= form_tag('/users') do %>
+<%= label_tag 'name', 'Your name' %>
+<%= text_field_tag 'username' %>
+<%= label_tag 'email', 'email' %>
+<%= email_field_tag 'email' %>
+<%= label_tag 'password', 'password' %>
+<%= password_field_tag 'password' %>
+<div><%= submit_tag 'submit' %></div>
+<%end%> 
+<%
+=end%>
+
+
+<%= form_for @user do |f| %>
+	<% @user.errors.any? %>
+	<% @user.errors.full_messages.each do |msg| %>
+			<p>
+				<%= msg %>
+			</p>
+		</div>
+	<% end %>		
+  <div class="field">
+		<div class = 'inner-div'>
+			<h2>Create account</h2>
+		
+				<%= f.text_field :username, placeholder: "Username", :class => 'text' %>
+
+				<%= f.email_field :email, placeholder: "Email", :class => 'text' %>
+
+				<%= f.password_field :password, placeholder: "Password", :class => 'text' %>
+
+				<%= f.submit 'submit', :class => 'submit' %>
+			</div>
+		</div>
+<% end %>
+<%= link_to  "Home", root_path, class: "button is-dark "%>
